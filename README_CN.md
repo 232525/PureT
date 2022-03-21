@@ -34,8 +34,6 @@ mscoco/
 ```
 [MSCOCO 2014](https://cocodataset.org/#download) 数据集的所有源图像和注释文件置于`mscoco/feature/coco2014`路径下。其余文件可通过[GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing)或者[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)进行下载。
 
-__(some important files are uploading (GoogleDrive)! slow!)__
-
 __注意:__ 为了进一步加快训练速度，也可以将数据集中所有图像的特征提取出来并保存为npz文件，可以在`mscoco/feature`路径下新建目录存储特征文件，训练和验证时需要将数据集读取改为[coco_dataset.py](datasets/coco_dataset.py)和[data_loader.py](datasets/data_loader.py)中的方式。同时也需要修改[pure_transformer.py](models/pure_transformer.py)（主要就是删除掉Backbone模块的定义，其余类和函数的接口应该是通用的）。
 
 ## 模型训练
@@ -60,8 +58,6 @@ bash experiments_PureT/PureT_SCST/train.sh
 
 ## 模型测试
 可以直接从[GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing)或[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)下载论文中报告结果所对应的预训练模型。 
-
-__(some important files are uploading (GoogleDrive)! slow!)__
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main_test.py --folder experiments_PureT/PureT_SCST/ --resume 27
