@@ -37,6 +37,8 @@ where the `mscoco/feature/coco2014` folder contains the raw image and annotation
 __(some important files are uploading! slow!)__
 
 ## Training
+*Note: our repository is mainly based on [JDAI-CV/image-captioning](https://github.com/JDAI-CV/image-captioning), and we directly reused their config.yml files, so there are many useless parameter in our model. （__waiting for further sorting__）*
+
 ### 1. Training under XE loss
 Before training, you may need check and modify the parameters in `config.yml` and `train.sh` files. Then run the script:
 
