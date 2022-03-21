@@ -34,7 +34,11 @@ mscoco/
 ```
 where the `mscoco/feature/coco2014` folder contains the raw image and annotation files of [MSCOCO 2014](https://cocodataset.org/#download) dataset. You can download other files from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
 
-__(some important files are uploading! slow!)__
+__(some important files are uploading (GoogleDrive)! slow!)__
+
+__NOTE:__ You can also extract image features of MSCOCO 2014 using [Swin-Transformer](https://github.com/microsoft/Swin-Transformer) or others and save them as `***.npz` files into `mscoco/feature` for training speed up, refer to [coco_dataset.py](datasets/coco_dataset.py) and [data_loader.py](datasets/data_loader.py) for how to read and prepare features. 
+__In this case, you need to make some modifications to [pure_transformer.py](models/pure_transformer.py) (delete the backbone module). For you smart and excellent people, I think it is an easy work.__
+
 
 ## Training
 *Note: our repository is mainly based on [JDAI-CV/image-captioning](https://github.com/JDAI-CV/image-captioning), and we directly reused their config.yml files, so there are many useless parameter in our model. （__waiting for further sorting__）*
@@ -59,10 +63,16 @@ bash experiments_PureT/PureT_SCST/train.sh
 ## Evaluation
 You can download the pre-trained model from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
 
+__(some important files are uploading (GoogleDrive)! slow!)__
+
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main_test.py --folder experiments_PureT/PureT_SCST/ --resume 27
 ```
-__(The pretrained models are uploading! slow!)__
+
+|BLEU-1|BLEU-2|BLEU-3|BLEU-4|METEOR|ROUGE-L| CIDEr |SPICE |
+| ---: | ---: | ---: | ---: | ---: | ---:  | ---:  | ---: |
+| 82.1 | 67.3 | 52.0 | 40.9 | 30.2 | 60.1  | 138.2 | 24.2 |
+
 
 ## Reference
 If you find this repo useful, please consider citing (no obligation at all):
