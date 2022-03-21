@@ -12,29 +12,64 @@ Implementation of __End-to-End Transformer Based Model for Image Captioning__ [A
 + tqdm
 
 ## Preparation
+### 1. coco-caption preparation
+Refer coco-caption [README.md](./coco_caption/README.md), you will first need to download the [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) code and models for use by SPICE. To do this, run:
+```bash
+cd coco_caption
+bash get_stanford_models.sh
+```
+### 2. Data preparation
+The necessary files in training and evaluation are saved in __`mscoco`__ folder, which is organized as follows:
+```
+mscoco/
+|--feature/
+    |--coco2014/
+       |--train2014/
+       |--val2014/
+       |--test2014/
+       |--annotations/
+|--misc/
+|--sent/
+|--txt/
+```
+where the `mscoco/feature/coco2014` folder contains the raw image and annotation files of [MSCOCO 2014](https://cocodataset.org/#download) dataset. You can download other files from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
+
 __(some important files are uploading! slow!)__
 
-...(waiting for description)
-
 ## Training
+### 1. Training under XE loss
+Before training, you may need check and modify the parameters in `config.yml` and `train.sh` files. Then run the script:
+
 ```
 # for XE training
 bash experiments_PureT/PureT_XE/train.sh
+```
+### 2. Training using SCST (self-critical sequence training)
+Copy the pre-trained model under XE loss into folder of `experiments_PureT/PureT_SCST/snapshot/` and modify `config.yml` and `train.sh` files. Then run the script:
 
+```bash
 # for SCST training
 bash experiments_PureT/PureT_SCST/train.sh
 ```
 
 ## Evaluation
-__(The pretrained models are uploading! slow!)__
+You can download the pre-trained model from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
 
-for example:
-```
+```bash
 CUDA_VISIBLE_DEVICES=0 python main_test.py --folder experiments_PureT/PureT_SCST/ --resume 27
 ```
+__(The pretrained models are uploading! slow!)__
 
-Loading...
+## Reference
+If you find this repo useful, please consider citing (no obligation at all):
+```
+@inproceedings{wangyiyu2022PureT,
+  title={End-to-End Transformer Based Model for Image Captioning},
+  author={Yiyu Wang and Jungang Xu and Yingfei Sun},
+  booktitle={AAAI},
+  year={2022}
+}
+```
 
-___
-The code is being sorted out and will be uploaded as soon as possible.
-代码整理中
+## Acknowledgements
+This repository is based on [JDAI-CV/image-captioning](https://github.com/JDAI-CV/image-captioning), [ruotianluo/self-critical.pytorch](https://github.com/ruotianluo/self-critical.pytorch) and [microsoft/Swin-Transformer](https://github.com/microsoft/Swin-Transformer).
