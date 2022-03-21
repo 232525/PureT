@@ -32,7 +32,7 @@ mscoco/
 |--sent/
 |--txt/
 ```
-[MSCOCO 2014](https://cocodataset.org/#download) 数据集的所有源图像和注释文件置于`mscoco/feature/coco2014`路径下。其余文件可通过[GoogleDrive]()(uploading)或者[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)进行下载。
+[MSCOCO 2014](https://cocodataset.org/#download) 数据集的所有源图像和注释文件置于`mscoco/feature/coco2014`路径下。其余文件可通过[GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing)或者[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)进行下载。
 
 __(some important files are uploading (GoogleDrive)! slow!)__
 
@@ -42,7 +42,7 @@ __注意:__ 为了进一步加快训练速度，也可以将数据集中所有�
 *注意: 代码实现主要基于[JDAI-CV/image-captioning](https://github.com/JDAI-CV/image-captioning)，直接复用了他们的配置文件没做太多修改，所以里面会有一些对我们模型无用的超参数设置。（需要进一步整理删除）*
 
 ### 1. XE损失下训练
-首先从[GoogleDrive]()(uploading)或者[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)中下载Backbone(Swin-Transformer)的预训练模型，并将其存储在当前工程的根目录下。（预训练模型来源于SwinTransformer官方开源库，去除了其中的head模块部分的权重）
+首先从[GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing)或者[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)中下载Backbone(Swin-Transformer)的预训练模型，并将其存储在当前工程的根目录下。（预训练模型来源于SwinTransformer官方开源库，去除了其中的head模块部分的权重）
 
 在训练前，可能还需要检查和修改`config.yml`和`train.sh`文件以适应你的运行环境。然后直接开训：
 
@@ -59,7 +59,7 @@ bash experiments_PureT/PureT_SCST/train.sh
 ```
 
 ## 模型测试
-可以直接从[GoogleDrive]()(uploading)或[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)下载论文中报告结果所对应的预训练模型。 
+可以直接从[GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing)或[百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh)下载论文中报告结果所对应的预训练模型。 
 
 __(some important files are uploading (GoogleDrive)! slow!)__
 

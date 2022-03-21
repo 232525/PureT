@@ -34,7 +34,7 @@ mscoco/
 |--sent/
 |--txt/
 ```
-where the `mscoco/feature/coco2014` folder contains the raw image and annotation files of [MSCOCO 2014](https://cocodataset.org/#download) dataset. You can download other files from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
+where the `mscoco/feature/coco2014` folder contains the raw image and annotation files of [MSCOCO 2014](https://cocodataset.org/#download) dataset. You can download other files from [GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
 
 __(some important files are uploading (GoogleDrive)! slow!)__
 
@@ -46,7 +46,7 @@ __In this case, you need to make some modifications to [pure_transformer.py](mod
 *Note: our repository is mainly based on [JDAI-CV/image-captioning](https://github.com/JDAI-CV/image-captioning), and we directly reused their config.yml files, so there are many useless parameter in our model. （__waiting for further sorting__）*
 
 ### 1. Training under XE loss
-Download pre-trained Backbone model (Swin-Transformer) from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh) and save it in the root directory.
+Download pre-trained Backbone model (Swin-Transformer) from [GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh) and save it in the root directory.
 
 Before training, you may need check and modify the parameters in `config.yml` and `train.sh` files. Then run the script:
 
@@ -63,7 +63,7 @@ bash experiments_PureT/PureT_SCST/train.sh
 ```
 
 ## Evaluation
-You can download the pre-trained model from [GoogleDrive]()(uploading) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
+You can download the pre-trained model from [GoogleDrive](https://drive.google.com/drive/folders/1HBw5NGGw8DjkyNurksCP5v8a5f0FG7zU?usp=sharing) or [百度网盘](https://pan.baidu.com/s/1tyXGJx50sllS-zylN62ZAw)(提取码: hryh). 
 
 __(some important files are uploading (GoogleDrive)! slow!)__
 
