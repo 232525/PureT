@@ -1,5 +1,5 @@
 # PureT
-论文 __End-to-End Transformer Based Model for Image Captioning__ 的PyTorch实现 [AAAI 2022]
+论文 __End-to-End Transformer Based Model for Image Captioning__ [[PDF/Arxiv]](https://arxiv.org/abs/2203.15350) 的PyTorch实现 [AAAI 2022]
 
 ![architecture](./imgs/architecture.png)
 
