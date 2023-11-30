@@ -1,6 +1,10 @@
 # PureT
 Implementation of __End-to-End Transformer Based Model for Image Captioning__ [[PDF/AAAI]](https://ojs.aaai.org/index.php/AAAI/article/view/20160) [[PDF/Arxiv]](https://arxiv.org/abs/2203.15350) [AAAI 2022]
 
+__NOTE: I am busy looking for a job and graduation thesis, maybe have no energy to reply issues, SORRY!!!__
+
+__NOTE: 作者最近在忙找工作以及毕业和新的工作，可能没太多精力回复issue，抱歉！！！__
+
 中文介绍请参考[README_CN.md](README_CN.md)
 
 ![architecture](./imgs/architecture.png)
